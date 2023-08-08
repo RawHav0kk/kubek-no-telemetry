@@ -16,7 +16,7 @@ exports.checkForUpdates = (cb) => {
     json: true,
   };
   request.get(
-    "https://api.github.com/repos/Seeroy/kubek-minecraft-dashboard/releases",
+    "https://api.github.com/RawHav0kk/kubek-no-telemetry/releases",
     options,
     (error, res, body) => {
       if (error) {
@@ -39,7 +39,7 @@ function checkForUpdates_fc(cb) {
     json: true,
   };
   request.get(
-    "https://api.github.com/repos/Seeroy/kubek-minecraft-dashboard/releases",
+    "https://api.github.com/RawHav0kk/kubek-no-telemetry/releases",
     options,
     (error, res, body) => {
       if (error) {
@@ -78,7 +78,7 @@ exports.setCheckingForUpdatesByInterval = (updatesInterval) => {
         console.log(
           additional.getTimeFormatted(),
           colors.yellow(
-            "https://github.com/Seeroy/kubek-minecraft-dashboard/releases/tag/" +
+            "https://github.com/RawHav0kk/kubek-no-telemetry/releases/tag/" +
               upd
           )
         );
@@ -98,7 +98,7 @@ exports.setCheckingForUpdatesByInterval = (updatesInterval) => {
         updatesByIntArray = {
           found: true,
           url:
-            "https://github.com/Seeroy/kubek-minecraft-dashboard/releases/tag/" +
+            "https://github.com/RawHav0kk/kubek-no-telemetry/releases/tag/" +
             upd,
           downloaded: dwn,
         };
@@ -126,7 +126,7 @@ exports.downloadLatestUpdate = function (cb) {
     json: true,
   };
   request.get(
-    "https://api.github.com/repos/Seeroy/kubek-minecraft-dashboard/releases",
+    "https://api.github.com/repos/RawHav0kk/kubek-no-telemetry/releases",
     options,
     (error, res, body) => {
       if (error) {
