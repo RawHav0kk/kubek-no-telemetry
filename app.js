@@ -23,7 +23,6 @@ const updatesInterval = 3 * 60 * 60 * 1000; // 3 hours
 // My modules
 const ftpd = require("./my_modules/ftpd_new");
 const updater = require("./my_modules/updater");
-const statsCollector = require("./my_modules/statistics");
 const config = require("./my_modules/config");
 const translator = require("./my_modules/translator");
 const kubek = require("./my_modules/kubek");
@@ -202,9 +201,6 @@ if (typeof serverjson_cfg !== "undefined") {
   }
 }
 
-statsCollector.collectStats(cfg, kubek_version, function (stats) {
-  statsCollector.sendStats(stats, true);
-});
 
 console.log(" ");
 console.log(colors.magenta(additional.kubekLogo));

@@ -1,5 +1,4 @@
 const request = require("request");
-const url = "http://seeroy.ru:8080/save_kubek?savedata=";
 const fs = require("fs");
 var os = require("os");
 var MD5 = require("crypto-js/md5");
@@ -92,23 +91,3 @@ exports.collectStats = (cfg, version, cb) => {
   cb(statss_unq);
 };
 
-exports.sendStats = (stats, thisIsStart) => {
-  options = {
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/534.45.1 (KHTML, like Gecko) Version/4.0 Safari/534.45.1",
-    },
-    json: true,
-  };
-  request.get(
-    url + encodeURIComponent(JSON.stringify(stats)) + "&start=" + thisIsStart,
-    options,
-    (error, res, body) => {
-      if (error) {
-        return console.error("WARNING! Error when sending stats: " + error);
-      } else {
-        return true;
-      }
-    }
-  );
-};

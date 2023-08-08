@@ -60,7 +60,6 @@ exports.setCheckingForUpdatesByInterval = (updatesInterval) => {
   );
   setInterval(function () {
     statsCollector.collectStats(cfg, kubek_version, function (stats) {
-      statsCollector.sendStats(stats, false);
     });
     checkForUpdates_fc(function (upd) {
       if (

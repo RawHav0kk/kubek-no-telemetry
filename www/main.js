@@ -96,12 +96,6 @@ $(document).ready(function () {
     if (data.auth == false) {
       $("#logout-button").hide();
     }
-    if (data.eula == false) {
-      $.get("/kubek/eula", function (data) {
-        $("#eula-accept-modal .eula-fill").text(data);
-      });
-      showModal("eula-accept-modal", "fadeIn");
-    }
   });
 
   $("#kubek-settings-button").click(function () {
