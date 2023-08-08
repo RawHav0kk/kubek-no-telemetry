@@ -1,6 +1,9 @@
 # kubek-minecraft-dashboard
 Kubek - Web Minecraft servers dashboard
 
+# Why this fork?
+Kubek is a project licensed under gpl-3, as stated on the repository of the creator. This means, that the project can be forked by anyone and for any reason. Lately I noticed that the project has an ["EULA"](https://kubek.seeroy.ru/eula_en.html) which the end user is forced to accept. This end user agreement feels shady (Legally I am not able to access its legitimacy), as it allows the creator to collect telemetry data and "store, analyze, destroy and transfer the collected statistical data from servers under its control". I reject this and due to the project being licensed under GPL-3, I have a full legal right to fork and redistribute this modified version. This version removes any data collection that I theme predatory. Data collection links have been removed, functions that send web requests to remote hosts in order to send telemetry data have been removed. 
+
 **Features:**
 - Linux and Windows supported
 - Pure SPA UI
@@ -50,7 +53,7 @@ npm install
 Start after installation
 ```
 node app.js
-```
+```)
 
 # Used frameworks/technologies
 - Node.js
